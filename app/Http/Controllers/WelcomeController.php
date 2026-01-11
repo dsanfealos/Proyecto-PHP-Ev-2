@@ -18,6 +18,14 @@ class WelcomeController extends Controller
         $categories = $this->getCategories();
         // Enrich products with offer data before slicing
         $enrichedProducts = $this->enrichProductsWithOffers($products);
+
+        //Añado info de la categoría asociada a cada producto
+        foreach ($enrichedProducts as &$product) {
+            $catId = $product['category_id'];
+            // Asignamos el array de la categoría si existe el ID en el array de categorías
+            $product['category'] = $categories[$catId] ?? null;
+        }
+
         // Get featured products (first 3 products for the featured section)
         $featuredProducts = array_slice($enrichedProducts, 0, 3, true);
         // Get featured categories (first 4 categories for the categories section)

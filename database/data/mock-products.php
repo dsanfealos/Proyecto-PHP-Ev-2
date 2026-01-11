@@ -8,7 +8,7 @@ return [
         'stock' => 321,
         'price' => 3.00,
         'category_id' => 1,
-        'offer_id' => 1 
+        'offer_id' => 3 
     ],
     2 => [
         'id' => 2,
@@ -28,6 +28,6 @@ return [
         'stock' => 1999,
         'price' => 250.00,
         'category_id' => 3,
-        'offer_id' => null 
+        'offer_id' => 1 
     ]
 ];

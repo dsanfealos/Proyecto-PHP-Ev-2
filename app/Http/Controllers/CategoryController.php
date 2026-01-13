@@ -39,6 +39,11 @@ class CategoryController extends Controller
         $categoryProducts = array_filter($products, function ($product) use ($id) {
             return $product['category_id'] == $id;
         });
+        foreach ($categoryProducts as &$product) {
+            $catId = $product['category_id'];
+            // Asignamos el array de la categoría si existe el ID en el array de categorías
+            $product['category'] = $categories[$catId] ?? null;
+        }
         $categoryProducts = $this->enrichProductsWithOffers($categoryProducts);
         return view('categories.show', compact('category', 'categoryProducts'));
     }

@@ -36,7 +36,7 @@
                 <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition">📷 Instagram: @kuatropatas</a>
                         <a href="#" class="text-gray-400 hover:text-white transition">🐦 Twitter: @kuatropatas_es</a>
-                    </div>
+                </div>
             </div>
         </div>
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-

@@ -3,7 +3,7 @@
 return [
     1 => [
         'id' => 1,
-        'name' => 'Oferta 20%',
+        'name' => 'Especial 20%',
         'description' => 'Descuento del 20% para muebles especialmente caros.',
         'slug' => 'descuento-especial',
         'discount_percentage' => 20

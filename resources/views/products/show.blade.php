@@ -6,7 +6,7 @@
         <!-- Imagen del Producto -->
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <div class="h-96 bg-gray-200 flex items-center justify-center">
-                    <span class="text-8xl">📦</span>
+                    <span class="text-8xl">{{ $product['category']['icon'] ?? '📦' }}</span>
                 </div>
             </div>
                     <!-- Información del Producto -->

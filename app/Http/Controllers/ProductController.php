@@ -16,8 +16,14 @@ class ProductController extends Controller
     public function index(): View
     {
         $products = $this->getProducts();
+        $categories = $this->getCategories();
         // Enrich products with offer data and calculate final prices
         $enrichedProducts = $this->enrichProductsWithOffers($products);
+        foreach ($enrichedProducts as &$product) {
+            $catId = $product['category_id'];
+            // Asignamos el array de la categoría si existe el ID en el array de categorías
+            $product['category'] = $categories[$catId] ?? null;
+        }
         return view('products.index', ['products' => $enrichedProducts]);
     }
 
@@ -27,11 +33,17 @@ class ProductController extends Controller
     public function onSale(): View
     {
         $products = $this->getProducts();
+        $categories = $this->getCategories();
         $enrichedProducts = $this->enrichProductsWithOffers($products);
         // Filter only products with offers
         $productsOnSale = array_filter($enrichedProducts, function ($product) {
             return $product['offer'] !== null;
         });
+        foreach ($productsOnSale as &$product) {
+            $catId = $product['category_id'];
+            // Asignamos el array de la categoría si existe el ID en el array de categorías
+            $product['category'] = $categories[$catId] ?? null;
+        }
         return view('products.index', ['products' => $productsOnSale]);
     }
 
@@ -79,6 +91,12 @@ class ProductController extends Controller
         // Get product category
         $categories = $this->getCategories();
         $category = $categories[$product['category_id']] ?? null;
+        //Añado info de la categoría asociada a cada producto
+        foreach ($enrichedProducts as &$product) {
+            $catId = $product['category_id'];
+            // Asignamos el array de la categoría si existe el ID en el array de categorías
+            $product['category'] = $categories[$catId] ?? null;
+        }
         return view('products.show', compact('product', 'category'));
     }
 

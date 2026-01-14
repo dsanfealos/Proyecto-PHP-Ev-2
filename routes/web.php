@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ContactController;
 
 //Welcome
 Route::get('/', [WelcomeController::class, 'index'])
@@ -26,9 +27,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])
     ->name('categories.show');
 
 //Contact
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 //Offers
 Route::resource('offers', OfferController::class)

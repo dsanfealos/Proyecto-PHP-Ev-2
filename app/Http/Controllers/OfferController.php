@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Traits\LoadsMockData;
+use App\Models\Offer;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class OfferController extends Controller
 {
-    use LoadsMockData;
     /**
      * Show all offers
      */
     public function index(): View
     {
-        $offers = $this->getOffers();
+        $offers = Offer::all();
         return view('offers.index', ['offers' => $offers]);
     }
     /**
@@ -26,19 +26,17 @@ class OfferController extends Controller
         if (!is_numeric($id) || $id < 1) {
             abort(404, 'ID de oferta inválido');
         }
-        $offers = $this->getOffers();
+        /*$offers = $this->getOffers();*/
         // Find offer by ID
-        $offer = $offers[$id] ?? null;
+        $offer = Offer::find($id);
         if (!$offer) {
             abort(404, 'Oferta no encontrada');
         }
         // Load and enrich products
-        $products = $this->getProducts();
+        /*$products = $this->getProducts();*/
         // Filter products by offer (un producto solo puede tener una oferta)
-        $offerProducts = array_filter($products, function ($product) use ($id) {
-            return $product['offer_id'] == $id;
-        });
-        $offerProducts = $this->enrichProductsWithOffers($offerProducts);
+        $offerProducts = $offer->products()->with(['category'])->get();
+        /*$offerProducts = $this->enrichProductsWithOffers($offerProducts);*/
         return view('offers.show', compact('offer', 'offerProducts'));
     }
 }

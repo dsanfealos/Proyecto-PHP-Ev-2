@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Traits\LoadsMockData;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
-    use LoadsMockData;
     /**
      * Show all categories
      */
     public function index(): View
     {
-        $categories = $this->getCategories();
+        $categories = Category::all();
         return view('categories.index', ['categories' => $categories]);
     }
     /**
@@ -27,24 +27,22 @@ class CategoryController extends Controller
         if (!is_numeric($id) || $id < 1) {
             abort(404, 'ID de categoría inválido');
         }
-        $categories = $this->getCategories();
+        /*$categories = $this->getCategories();*/
         // Find category by ID
-        $category = $categories[$id] ?? null;
+        $category = Category::find($id);
         if (!$category) {
             abort(404, 'Categoría no encontrada');
         }
         // Load and enrich products
-        $products = $this->getProducts();
+       /* $products = $this->getProducts();*/
         // Filter products by category
-        $categoryProducts = array_filter($products, function ($product) use ($id) {
-            return $product['category_id'] == $id;
-        });
-        foreach ($categoryProducts as &$product) {
+        $categoryProducts = $category->products()->with(['offer'])->get();
+        /*foreach ($categoryProducts as &$product) {
             $catId = $product['category_id'];
             // Asignamos el array de la categoría si existe el ID en el array de categorías
             $product['category'] = $categories[$catId] ?? null;
         }
-        $categoryProducts = $this->enrichProductsWithOffers($categoryProducts);
+        $categoryProducts = $this->enrichProductsWithOffers($categoryProducts);*/
         return view('categories.show', compact('category', 'categoryProducts'));
     }
 }

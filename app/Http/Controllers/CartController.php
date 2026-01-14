@@ -2,31 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Traits\LoadsMockData;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class CartController extends Controller
 {
-    use LoadsMockData;
     /**
      * Show cart overview
      */
     public function index(): View
     {
-        $cart = $this->getCart();
-        $products = $this->getProducts();
-        // Add product names to cart data
-        $cartWithProducts = [];
-        foreach ($cart as $item) {
-            $product = $products[$item['product_id']] ?? null;
-            $cartWithProducts[] = array_merge($item, [
-                'name' => $product ? $product['name'] : 'Producto no encontrado',
-                'price' => $product ? $product['price'] : 0
-            ]);
-        }
+        // Por ahora, mostramos el carrito del primer usuario
+        // En la Práctica 4 se implementará la autenticación
+        $userId = 1; // Usuario por defecto
+        $user = User::find($userId);
+        $cartProducts = $user->products; // Obtiene productos con datos pivot
         return view('cart.index', [
-            'cartItems' => $cartWithProducts
+            'cartProducts' => $cartProducts
         ]);
     }
     /**

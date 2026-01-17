@@ -14,7 +14,7 @@
                 <ul class="space-y-2 text-gray-400">
                     <li><a href="{{ route('welcome') }}" class="hover:text-white
                     transition">Inicio</a></li>
-                    <li><a href="{{ route('products.index') }}" class="hover:textwhite
+                    <li><a href="{{ route('products.index') }}" class="hover:text-white
                     transition">Productos</a></li>
                     <li><a href="{{ route('categories.index') }}"
                     class="hover:text-white transition">Categorías</a></li>
@@ -27,7 +27,6 @@
                 <ul class="space-y-2 text-gray-400">
                     <li>📞 676 121 353</li>
                     <li>📧 info@kuatropatas.es</li>
-                    <li>💬 Chat en vivo</li>
                     <li>🕒 Horario de atención: 9:00h - 14:00h</li>
                 </ul>
             </div>

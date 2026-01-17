@@ -39,7 +39,9 @@
                         <tr class="hover:bg-gray-50">
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    <div class="text-3xl mr-4">{{$product->category->icon ?? 📦}}</div>
+                                    <div class="text-3xl mr-4">
+                                        <img style="width: 100px" class="object-cover" src="{{$product->image}}" alt="📦">
+                                    </div>
                                     <div>
                                         <div class="font-semibold text-gray-900">{{ $product->name }}</div>
                                         <div class="text-sm text-gray-600">{{ $product->category->name }}</div>

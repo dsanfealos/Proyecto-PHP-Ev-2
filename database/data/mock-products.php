@@ -8,27 +8,30 @@ return [
         'stock' => 321,
         'price' => 3.00,
         'category_id' => 1,
-        'offer_id' => 3 
+        'offer_id' => 3,
+        'image' => 'https://lh4.googleusercontent.com/proxy/kz0MG1Ic0KIDwfMPJ5UwdTqDoKkCzVpAEbTDGXMiKQsOBjlEQ9wxXS7eU5a5Blu0tJ1ACs4KIQVpgZFa6b7QzfjIvFtiYBq-SNgLRVfbA6AN_ZQ60-0A0FLQ6EiyCQ'
     ],
     2 => [
         'id' => 2,
         'name' => 'Sofá #427',
         'description' => 'En serio, son todos iguales.',
-        'color' => 'Marrón',
+        'color' => 'Gris',
         'stock' => 41,
         'price' => 350.00,
         'category_id' => 1,
-        'offer_id' => null 
+        'offer_id' => null,
+        'image' => 'https://img.freepik.com/vector-gratis/sofa-cuero-rojo-ilustracion-realista_1284-12133.jpg' 
     ],
     3 => [
         'id' => 3,
         'name' => 'Armario Ikea',
         'description' => '¡Perfecto para hacer una actividad en familia!',
-        'color' => 'Beige',
+        'color' => 'Marrón',
         'stock' => 1999,
         'price' => 250.00,
         'category_id' => 3,
-        'offer_id' => 1 
+        'offer_id' => 1,
+        'image' => 'https://static.vecteezy.com/system/resources/thumbnails/041/642/922/small/ai-generated-contemporary-brown-wooden-wardrobe-for-interior-design-png.png'
     ],
     4 => [
         'id' => 4,
@@ -38,37 +41,41 @@ return [
         'stock' => 223,
         'price' => 50.00,
         'category_id' => 3,
-        'offer_id' => null 
+        'offer_id' => null,
+        'image' => 'https://www.options.es/media/catalog/product/cache/23a39abc451cd4fdcc5d36edc81a8436/0/0/0000036114_gd_6_1.png'
     ],
     5 => [
         'id' => 5,
         'name' => 'Mesa comedor',
         'description' => 'Mueble indispensable en toda nueva casa. Longitud envidiable.',
-        'color' => 'Caoba',
+        'color' => 'Marrón claro',
         'stock' => 53,
         'price' => 75.00,
         'category_id' => 2,
-        'offer_id' => 2 
+        'offer_id' => 2,
+        'image' => 'https://img.freepik.com/fotos-premium/mesa-comedor-rustica-granja-perfecta-reuniones-acogedoras_984027-301701.jpg?semt=ais_hybrid&w=740&q=80'
     ],
     6 => [
         'id' => 6,
         'name' => 'Mesita de noche Valium',
         'description' => 'Último modelo de mesita de noche con efectos somníferos.',
-        'color' => 'Negro',
+        'color' => 'Rojo',
         'stock' => 666,
         'price' => 27.00,
         'category_id' => 2,
-        'offer_id' => null 
+        'offer_id' => null,
+        'image' => 'https://static.vecteezy.com/system/resources/previews/021/281/140/non_2x/nightstand-isolated-on-transparent-free-png.png'
     ],
     7 => [
         'id' => 7,
         'name' => 'Sifonier modelo X980LS',
         'description' => 'Sifonier de abuela remodernizado, con actualizaciones increíbles.',
-        'color' => 'Marrón',
+        'color' => 'Caoba',
         'stock' => 95,
         'price' => 175.00,
         'category_id' => 3,
-        'offer_id' => 2 
+        'offer_id' => 2,
+        'image' => 'https://tranviaser.org/wp-content/uploads/2025/03/111-x-57-x-44-2.png'
     ],
     8 => [
         'id' => 8,
@@ -78,6 +85,7 @@ return [
         'stock' => 31,
         'price' => 64.00,
         'category_id' => 1,
-        'offer_id' => null 
+        'offer_id' => null,
+        'image' => 'https://png.pngtree.com/png-vector/20240819/ourmid/pngtree-3d-vintage-rocking-relaxchair-isolated-old-rustic-and-antique-png-image_13543985.png'
     ],
 ];

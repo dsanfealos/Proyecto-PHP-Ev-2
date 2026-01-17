@@ -9,7 +9,7 @@
     @endif
     
     <div class="h-48 bg-gray-200 flex items-center justify-center {{ $product->offer ? 'bg-gradient-to-br from-orange-50 to-red-50' : '' }}">
-        <span class="text-4xl">{{$product->category->icon ?? 📦}}</span>
+        <img class="h-full w-full object-cover" src="{{$product->image}}" alt="📦">
 </div>
     <div class="p-6">
         <h4 class="text-xl font-bold mb-2 text-gray-900">{{ $product->name }}</h4>

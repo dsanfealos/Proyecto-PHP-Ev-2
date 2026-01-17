@@ -8,10 +8,10 @@
             <!-- Imagen del Producto -->
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <div class="h-96 bg-gray-200 flex items-center justify-center">
-                    <span class="text-8xl">{{$product->category->icon ?? 📦}}</span>
+                    <img class="img-fluid h-full" src="{{$product->image}}" alt="📦">
                 </div>
             </div>
-
+            
             <!-- Información del Producto -->
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ $product->name }}</h1>

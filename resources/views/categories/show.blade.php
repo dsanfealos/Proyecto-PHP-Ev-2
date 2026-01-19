@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 @section('title', $category->name . ' - Muebles Kuatropatas')
 @section('content')
     <div class="container mx-auto px-6 py-8">

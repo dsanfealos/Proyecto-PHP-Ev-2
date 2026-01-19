@@ -4,7 +4,7 @@
 
 
 
-@extends('layouts.app')
+@extends('layouts.public')
 @section('title', 'Todos los Productos - Muebles Kuatropatas')
 @push('styles')
     <style>

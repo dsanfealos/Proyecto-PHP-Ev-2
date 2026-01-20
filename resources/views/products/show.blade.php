@@ -1,7 +1,15 @@
 @extends('layouts.public')
 
 @section('title', $product->name . ' - Muebles Kuatropatas')
-
+@push('styles')
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+    </style>
+@endpush
 @section('content')
     <div class="container mx-auto px-6 py-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -81,6 +89,22 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="container mx-auto px-6 py-8">
+            @if ($filteredProducts->isNotEmpty())
+                <h3 class="text-gray-600 text-2xl font-bold mb-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg shadowlg
+            p-4">Productos del mismo color:</h3>
+                <div class="product-grid">
+                    @forelse($filteredProducts as $filteredproduct)
+                        <x-product-card :product="$filteredproduct" />
+                        @empty
+                        <div class="col-span-full text-center py-12">
+                            <p class="text-gray-500 text-lg">No hay productos disponibles.
+                            </p>
+                        </div>
+                    @endforelse
+                </div>
+            @endif            
         </div>
     </div>
 @endsection

@@ -107,8 +107,13 @@ class ProductController extends Controller
         }
         
         $category = $product->category;
+        //Lista de productos filtrados según su color
+        $filteredProducts = Product::with(['category', 'offer'])
+            ->where('color', $product->color)
+            ->where('id', '!=', $product->id)
+            ->get();
         
-        return view('products.show', compact('product', 'category'));
+        return view('products.show', ['product' => $product, 'category'=> $category, 'filteredProducts'=> $filteredProducts]);
     }
 
     /**

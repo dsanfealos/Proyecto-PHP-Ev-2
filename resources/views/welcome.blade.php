@@ -5,7 +5,7 @@
 @push('styles')
     <style>
         .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, brown 30%, darkgreen 100%);
         }
     </style>
 @endpush
@@ -42,7 +42,7 @@
             <h3 class="text-3xl font-bold mb-12 text-center text-gray-900">
             Nuestras Categorías
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:px-20 gap-8">
                 @forelse($featuredCategories as $category)
                     <x-category-card :category="$category" />
                     @empty

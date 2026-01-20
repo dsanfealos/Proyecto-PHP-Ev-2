@@ -5,14 +5,14 @@
         <div class="mb-8">
             <h1 class="text-3xl font-bold text-gray-900 mb-4">Nuestras
                 Categorías</h1>
-            <p class="text-gray-600">Explora nuestros productos por categoría.</p>
+            <p class="text-gray-700">Explora nuestros productos por categoría.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             @forelse($categories as $category)
                 <x-category-card :category="$category" />
                 @empty
                 <div class="col-span-full text-center py-12">
-                    <p class="text-gray-500 text-lg">No hay categorías
+                    <p class="text-gray-600 text-lg">No hay categorías
                         disponibles.</p>
                 </div>
             @endforelse

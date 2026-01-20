@@ -92,7 +92,7 @@
         </div>
         <div class="container mx-auto px-6 py-8">
             @if ($filteredProducts->isNotEmpty())
-                <h3 class="text-gray-600 text-2xl font-bold mb-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg shadowlg
+                <h3 class="text-gray-600 text-2xl font-bold mb-8 bg-gradient-to-r from-green-600 to-cyan-500 rounded-lg shadowlg
             p-4">Productos del mismo color:</h3>
                 <div class="product-grid">
                     @forelse($filteredProducts as $filteredproduct)

@@ -3,7 +3,7 @@
 <head>
     @include('partials.head')
 </head>
-<body class="bg-gray-50">
+<body class="bg-cyan-500">
     <!-- Header usando partial -->
     @include('partials.header')
 

@@ -5,7 +5,7 @@
         <div class="mb-8">
             <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ $category->name
                 }}</h1>
-            <p class="text-gray-600 mb-4">{{ $category->description }}</p>
+            <p class="text-gray-700 mb-4">{{ $category->description }}</p>
             <a href="{{ route('categories.index') }}"
                 class="text-primary-600 hover:text-primary-700 transition">
                 ← Volver a Categorías
@@ -19,7 +19,7 @@
             </div>
         @else
             <div class="text-center py-12">
-                <p class="text-gray-500 text-lg">No hay productos en esta
+                <p class="text-gray-600 text-lg">No hay productos en esta
                     categoría.</p>
             </div>
         @endif

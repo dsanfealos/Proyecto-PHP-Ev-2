@@ -35,20 +35,10 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        //TODO - Pepper
-        /**
-         * $user = User::create([
-         *       'name' => $request->name,
-         *       'email' => $request->email,
-         *        // Añadimos un "pepper" desde nuestro archivo .env
-         *       'password' => Hash::make($request->password . config('app.password_pepper')),
-         * ]);
-         */
-
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'password' => Hash::make($request->password . config('app.password_pepper')),
         ]);
 
         event(new Registered($user));

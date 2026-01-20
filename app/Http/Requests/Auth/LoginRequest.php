@@ -41,16 +41,14 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        //TODO - Pepper
-        /**
-        * $user = User::where('email', $this->email)->first();
-        *
-        *   if (! $user || ! Hash::check($this->password . config('app.password_pepper'), $user->password)) {
-        *      // ... lógica de error de autenticación
-        * }
-        */
+        $passwordWithPepper = $this->password . config('app.password_pepper');
 
-        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        $credentials = [
+            'email' => $this->email,
+            'password' => $passwordWithPepper
+        ];
+
+        if (! Auth::attempt($credentials, $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([

@@ -123,4 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+
+    'password_pepper' => env('APP_PASSWORD_PEPPER'),
 ];

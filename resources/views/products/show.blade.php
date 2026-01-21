@@ -50,6 +50,16 @@
                         </a>
                     </div>
                 @endif
+
+                <!-- Stock -->
+                @if($product->stock)
+                    <div class="mb-6 flex items-baseline">
+                        <span class="text-sm text-gray-500">Stock:</span>
+                        <p class="ml-2 bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm hover:bg-primary-200 transition">
+                            {{ $product->stock }} unidades
+                        </p>
+                    </div>
+                @endif
             
                 <!-- Oferta -->
                 @if($product->offer)

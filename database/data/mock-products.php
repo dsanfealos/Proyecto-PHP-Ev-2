@@ -9,7 +9,7 @@ return [
         'price' => 3.00,
         'category_id' => 1,
         'offer_id' => 3,
-        'image' => 'https://lh4.googleusercontent.com/proxy/kz0MG1Ic0KIDwfMPJ5UwdTqDoKkCzVpAEbTDGXMiKQsOBjlEQ9wxXS7eU5a5Blu0tJ1ACs4KIQVpgZFa6b7QzfjIvFtiYBq-SNgLRVfbA6AN_ZQ60-0A0FLQ6EiyCQ'
+        'image' => 'https://static.carrefour.es/hd_510x_/crs/cdn_static/catalog/hd/480213_00_1.jpg'
     ],
     2 => [
         'id' => 2,
@@ -86,6 +86,6 @@ return [
         'price' => 64.00,
         'category_id' => 1,
         'offer_id' => null,
-        'image' => 'https://png.pngtree.com/png-vector/20240819/ourmid/pngtree-3d-vintage-rocking-relaxchair-isolated-old-rustic-and-antique-png-image_13543985.png'
+        'image' => 'https://propart.es/wp-content/uploads/2023/03/PROP-ART-Febrero-2023-07476-copia-2.jpg'
     ],
 ];

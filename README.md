@@ -163,4 +163,4 @@ Daniel Sanfélix Alós<br>
 Github: https://github.com/dsanfealos/Proyecto-PHP-Ev-2
 
 ## <u>Licencia</u>
-Uso educativo.
+Uso educativo. Creative Commons

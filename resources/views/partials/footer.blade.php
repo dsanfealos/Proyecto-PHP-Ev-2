@@ -18,7 +18,7 @@
                     transition">Productos</a></li>
                     <li><a href="{{ route('categories.index') }}"
                     class="hover:text-white transition">Categorías</a></li>
-                    <li><a href="#" class="hover:text-white
+                    <li><a href="{{ route('contact') }}" class="hover:text-white
                     transition">Contacto</a></li>
                 </ul>
             </div>

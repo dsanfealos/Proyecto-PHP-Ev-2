@@ -1,4 +1,4 @@
-<div class="bg-orange-500 mx-8 rounded-lg border-orange-700 border-2 shadow-lg p-6 product-card cursor-pointer flex flex-col h-full {{ $class }}">
+<div class="bg-white mx-8 rounded-lg border-black border-2 shadow-lg p-6 product-card cursor-pointer flex flex-col h-full {{ $class }}">
     <div class="w-full h-48 mb-4">
         <img class="w-full img-fluid h-full object-contain rounded-md shadow-sm" 
              src="{{ $category->icon }}" 
@@ -11,8 +11,8 @@
         
         <div class="mt-auto">
             <a href="{{ route('categories.show', $category->id) }}"
-                class="text-primary-600 font-semibold hover:text-primary-700 transition">
-                Ver Productos →
+                class="block text-center bg-primary-600 mt-auto text-white px-4 py-1 rounded-lg hover:bg-primary-700 transition">
+                Ver Productos
             </a>
         </div>
     </div>

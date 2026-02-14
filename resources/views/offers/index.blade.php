@@ -10,7 +10,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @forelse($offers as $offer)
-                <div class="bg-white rounded-lg p-6 borderorange-
+                <div class="bg-white border-black border-2 rounded-lg p-6 borderorange-
                     500">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">{{ $offer->name }}</h3>
                     <p class="text-gray-600 mb-4">{{ $offer->description }}</p>

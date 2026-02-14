@@ -16,7 +16,7 @@
     @else
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
             <table class="w-full">
-                <thead class="bg-gray-50">
+                <thead class="bg-gray-200">
                     <tr>
                         <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Producto</th>
                         <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Precio</th>
@@ -95,7 +95,7 @@
                         </tr>
                     @endforeach
                 </tbody>
-                <tfoot class="bg-gray-50">
+                <tfoot class="bg-gray-200">
                     <tr>
                         <td colspan="4" class="px-6 py-4 text-right font-semibold text-gray-700">Total:</td>
                         <td class="px-6 py-4 font-bold text-xl text-primary-600">€{{ number_format($total, 2) }}</td>
@@ -105,7 +105,7 @@
         </div>
 
         <div class="mt-6 flex justify-between items-center">
-            <a href="{{ route('products.index') }}" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-300 transition">
+            <a href="{{ route('products.index') }}" class="bg-white border-black border-2 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-300 transition">
                 ← Seguir Comprando
             </a>
             {{-- FORMULARIO PARA FINALIZAR COMPRA --}}

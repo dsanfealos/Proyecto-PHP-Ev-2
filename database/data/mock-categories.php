@@ -18,7 +18,7 @@ return [
         'id' => 3,
         'name' => 'Armarios y almacenaje',
         'slug' => 'almacenaje',
-        'description' => 'Muebles dentro de los cuales dejas cosas.',
+        'description' => 'Muebles dentro de los cuales guardas cosas.',
         'icon' => 'https://static.vecteezy.com/system/resources/thumbnails/050/779/040/small/minimalist-wooden-cabinet-with-a-light-finish-isolated-on-transparent-background-png.png'
     ],
     4 => [

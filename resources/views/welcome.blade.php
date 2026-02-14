@@ -5,7 +5,7 @@
 @push('styles')
     <style>
         .hero-gradient {
-            background: linear-gradient(135deg, brown 30%, darkgreen 100%);
+            background: linear-gradient(135deg, rgba(255, 123, 0, 0.63) 30%, rgb(50, 173, 255) 100%);
         }
     </style>
 @endpush
@@ -17,7 +17,7 @@
             <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
                 Bienvenido a Muebles Kuatropatas
             </h2>
-            <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
                 Descubre una amplia variedad de muebles de segunda mano.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
